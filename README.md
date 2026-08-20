@@ -1,1 +1,1 @@
-# libby-integration
+# Goodreads - Libby Integration
