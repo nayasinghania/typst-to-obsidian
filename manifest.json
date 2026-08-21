@@ -1,0 +1,13 @@
+{
+  "description": "A browser extension that can automatically find book availability based on your Goodreads lists",
+  "manifest_version": 3,
+  "name": "Goodreads-Libby Extension",
+  "version": "0.1",
+  "homepage_url":  "https://github.com/nayasinghania/goodreads-libby-integration",
+  "content_scripts": [
+    {
+    "matches": ["https://www.goodreads.com/*"],
+    "js": ["script.js"]
+    }
+  ]
+}
