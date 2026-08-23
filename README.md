@@ -1,1 +1,1 @@
-# Goodreads - Libby Integration
+# typst-to-obsidian
