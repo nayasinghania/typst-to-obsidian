@@ -3,6 +3,10 @@
   "manifest_version": 3,
   "name": "Goodreads-Libby Extension",
   "version": "0.1",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Goodreads Libby Integration"
+  },
   "homepage_url":  "https://github.com/nayasinghania/goodreads-libby-integration",
   "content_scripts": [
     {
