@@ -10,3 +10,8 @@ class Heading:
 @dataclass
 class Text:
   text: str
+
+
+@dataclass
+class Bullet:
+  text: str
