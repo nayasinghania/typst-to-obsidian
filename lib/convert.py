@@ -7,7 +7,7 @@ def parse_line(line: str) -> Heading | Text:
   if len(parts) == 2:
     marks, text = parts
 
-    if set(marks) == {"="}:
+    if set(marks) == {'='}:
       return Heading(level=len(marks), text=text)
 
   return Text(text=line)

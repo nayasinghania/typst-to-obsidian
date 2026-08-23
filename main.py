@@ -1,9 +1,18 @@
+import sys
+
 from lib.convert import parse_line
 
-with open("example.typst", encoding="utf-8") as file:
-  source = file.read()
+try:
+  filename = sys.argv[1]
 
-nodes = [parse_line(line) for line in source.splitlines() if line.strip()]
+  with open(filename, encoding='utf-8') as file:
+    source = file.read()
 
-for node in nodes:
-  print(node)
+  nodes = [parse_line(line) for line in source.splitlines() if line.strip()]
+
+  for node in nodes:
+    print(node)
+except IndexError:
+  print('Please provide a Typst filename to convert')
+except FileNotFoundError:
+  print('This Typst file does not exist')

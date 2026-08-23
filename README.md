@@ -4,3 +4,9 @@ This is a command-line Typst to Obsididan converter with an AST written in Pytho
 ## Setup
 1. `pip install -r requirements.txt`
 2. `python main.py`
+
+## Usage
+`python main.py example.typst`
+
+## Code Formatting
+`ruff format .`
