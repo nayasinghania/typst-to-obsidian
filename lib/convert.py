@@ -1,7 +1,7 @@
-from .classes import Heading, Text, Bullet
+from .classes import *
 
 
-def parse_line(line: str) -> Heading | Bullet | Text:
+def parse_line(line: str) -> Node:
   parts = line.split(maxsplit=1)
 
   if len(parts) == 2:
@@ -11,6 +11,9 @@ def parse_line(line: str) -> Heading | Bullet | Text:
       return Heading(level=len(marks), text=text)
 
     if set(marks) == {'-'}:
-      return Bullet(text=text)
+      return BulletedList(text=text)
+
+    if set(marks) == {'+'}:
+      return NumberedList(text=text)
 
   return Text(text=line)

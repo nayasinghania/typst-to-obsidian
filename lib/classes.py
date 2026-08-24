@@ -13,5 +13,13 @@ class Text:
 
 
 @dataclass
-class Bullet:
+class BulletedList:
   text: str
+
+
+@dataclass
+class NumberedList:
+  text: str
+
+
+Node = Heading | Text | BulletedList | NumberedList
