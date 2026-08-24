@@ -6,7 +6,7 @@ This is a command-line Typst to Obsididan converter with an AST written in Pytho
 2. `python main.py`
 
 ## Usage
-`python main.py example.typst`
+`python main.py example.typ`
 
 ## Code Formatting
 `sh format.sh`
