@@ -8,7 +8,7 @@ try:
   with open(filename, encoding='utf-8') as file:
     source = file.read()
 
-  nodes = [parse_line(line) for line in source.splitlines() if line.strip()]
+  nodes = [parse_line(line) for line in source.splitlines()]
 
   for node in nodes:
     print(node)

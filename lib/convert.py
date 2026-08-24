@@ -2,6 +2,9 @@ from .classes import *
 
 
 def parse_line(line: str) -> Node:
+  if not line.strip():
+    return EmptyLine()
+
   parts = line.split(maxsplit=1)
 
   if len(parts) == 2:

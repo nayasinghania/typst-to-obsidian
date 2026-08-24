@@ -1,25 +1,31 @@
 from dataclasses import dataclass
 
 
+class Node:
+  pass
+
+
 @dataclass
-class Heading:
+class EmptyLine(Node):
+  pass
+
+
+@dataclass
+class Heading(Node):
   level: int
   text: str
 
 
 @dataclass
-class Text:
+class Text(Node):
   text: str
 
 
 @dataclass
-class BulletedList:
+class BulletedList(Node):
   text: str
 
 
 @dataclass
-class NumberedList:
+class NumberedList(Node):
   text: str
-
-
-Node = Heading | Text | BulletedList | NumberedList
