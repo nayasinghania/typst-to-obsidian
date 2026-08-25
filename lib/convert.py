@@ -14,9 +14,9 @@ def parse_line(line: str) -> Node:
       return Heading(level=len(marks), text=text)
 
     if set(marks) == {'-'}:
-      return BulletedList(text=text)
+      return BulletedListItem(text=text)
 
     if set(marks) == {'+'}:
-      return NumberedList(text=text)
+      return NumberedListItem(text=text)
 
-  return Text(text=line)
+  return TextLine(text=line)

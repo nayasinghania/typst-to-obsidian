@@ -17,15 +17,15 @@ class Heading(Node):
 
 
 @dataclass
-class Text(Node):
+class TextLine(Node):
   text: str
 
 
 @dataclass
-class BulletedList(Node):
+class BulletedListItem(Node):
   text: str
 
 
 @dataclass
-class NumberedList(Node):
+class NumberedListItem(Node):
   text: str
