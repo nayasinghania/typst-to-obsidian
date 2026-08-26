@@ -1,4 +1,6 @@
 .venv/
-converter/.ruff_cache/
+.ruff_cache/
+
+convert/.ruff_cache
 
 parser/target/

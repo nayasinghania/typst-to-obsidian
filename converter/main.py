@@ -1,1 +1,1 @@
-print("Coming soon")
+print('Coming soon')
