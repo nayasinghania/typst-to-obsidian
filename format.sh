@@ -1,1 +1,1 @@
-ruff check . --fix && ruff format .
+ruff check converter/ --fix && ruff format converter/

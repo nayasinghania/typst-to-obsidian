@@ -1,12 +1,2 @@
 # Typst to Obsidian
-This is a command-line Typst to Obsididan converter with an AST written in Python. Currently a work in progress.
-
-## Setup
-1. `pip install -r requirements.txt`
-2. `python main.py`
-
-## Usage
-`python main.py example.typ`
-
-## Code Formatting
-`sh format.sh`
+This is a command-line Typst to Obsididan converter with Typst's native parser written in Rust and a converter written in Python.
