@@ -23,7 +23,17 @@ def render_strong(node: JsonNode) -> str:
       continue
     elif child['kind'] == 'Markup':
       content = render(child)
-  return f'{"**"}{content}{"**"}'
+  return f'**{content}**'
+
+
+def render_emphasis(node: JsonNode) -> str:
+  content = ''
+  for child in node.get('children', []):
+    if child['kind'] == 'Underscore':
+      continue
+    elif child['kind'] == 'Markup':
+      content = render(child)
+  return f'*{content}*'
 
 
 def render(node: JsonNode) -> str:
@@ -32,6 +42,9 @@ def render(node: JsonNode) -> str:
 
   if node['kind'] == 'Strong':
     return render_strong(node)
+
+  if node['kind'] == 'Emph':
+    return render_emphasis(node)
 
   if 'children' in node:
     return ''.join(render(child) for child in node['children'])
