@@ -6,3 +6,8 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 
 ## Setup
 1. `pip install -r converter/requirements.txt`
+
+## Currently Supported Conversions
+- Headings
+- Bold text
+- Italic text
