@@ -15,7 +15,7 @@ impl<'a> From<&'a SyntaxNode> for JsonNode<'a> {
     fn from(node: &'a SyntaxNode) -> Self {
         Self {
             kind: format!("{:?}", node.kind()),
-            text: node.leaf_text(),
+            text: node.leaf_text().as_str(),
             children: node.children().map(JsonNode::from).collect(),
         }
     }
