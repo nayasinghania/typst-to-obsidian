@@ -5,4 +5,4 @@ echo "--------------------"
 echo "Converting $filename"
 echo "--------------------"
 echo ""
-cargo run --quiet --manifest-path parser/Cargo.toml -- "$filename" | python converter/main.py
+cargo run --quiet --manifest-path parser/Cargo.toml -- "$filename" | python converter/main.py "$filename"
