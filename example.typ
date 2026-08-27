@@ -2,7 +2,6 @@
 == Level 2 Heading
 === Level 3 Heading
 
-
 - A bullet item
 - Another bullet item
 
