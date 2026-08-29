@@ -36,6 +36,14 @@ def render_emphasis(node: JsonNode) -> str:
   return f'*{content}*'
 
 
+def render_bulleted_list(node: JsonNode) -> str:
+  content = ''
+  for child in node.get('children', []):
+    if child['kind'] == 'Dash':
+      continue
+  return content
+
+
 def render(node: JsonNode) -> str:
   if node['kind'] == 'Heading':
     return render_heading(node)
