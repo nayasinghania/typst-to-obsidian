@@ -11,3 +11,4 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 - Headings
 - Bold text
 - Italic text
+- Highlighted text

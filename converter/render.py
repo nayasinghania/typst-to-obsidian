@@ -36,12 +36,21 @@ def render_emphasis(node: JsonNode) -> str:
   return f'*{content}*'
 
 
-def render_bulleted_list(node: JsonNode) -> str:
+def render_function(node: JsonNode) -> str:
   content = ''
+  fname = ''
+  selected = ''
+  options = {'highlight': '=='}
+  skips = ['Ident', 'LeftBracket', 'RightBracket']
   for child in node.get('children', []):
-    if child['kind'] == 'Dash':
+    if child['kind'] in skips:
+      fname = child.get('text')
+      if fname is not None:
+        selected = options[fname]
       continue
-  return content
+    elif child['kind'] == 'Args' or child['kind'] == 'Markup':
+      content = render(child)
+  return selected + content[1:-1] + selected
 
 
 def render(node: JsonNode) -> str:
@@ -53,6 +62,12 @@ def render(node: JsonNode) -> str:
 
   if node['kind'] == 'Emph':
     return render_emphasis(node)
+
+  if node['kind'] == 'Hash':
+    return ''
+
+  if node['kind'] == 'FuncCall':
+    return render_function(node)
 
   if 'children' in node:
     return ''.join(render(child) for child in node['children'])
