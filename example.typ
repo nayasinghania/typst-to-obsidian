@@ -16,4 +16,6 @@ This is the next line
 
 #lorem(15)
 
+#lower("MAKE THIS LOWERCASE")
+
 This is a sentence. This is another sentence.
