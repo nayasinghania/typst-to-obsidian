@@ -1,5 +1,5 @@
 echo 'Formatting and linting Python code'
-ruff check converter/ --fix && ruff format converter/
+ruff check render/ --fix && ruff format render/
 
 echo ''
 

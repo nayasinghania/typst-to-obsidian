@@ -1,5 +1,5 @@
 from classes import JsonNode
-
+from lorem_gen.generator import LoremGenerator
 
 def render_heading(node: JsonNode) -> str:
   marker = ''
@@ -40,16 +40,21 @@ def render_function(node: JsonNode) -> str:
   content = ''
   fname = ''
   selected = ''
-  options = {'highlight': '=='}
-  skips = ['Ident', 'LeftBracket', 'RightBracket']
+  options = {
+    'highlight': '==',
+    'lorem': ''
+  }
   for child in node.get('children', []):
-    if child['kind'] in skips:
-      fname = child.get('text')
-      if fname is not None:
-        selected = options[fname]
-      continue
-    elif child['kind'] == 'Args' or child['kind'] == 'Markup':
+    if child['kind'] == 'Ident':
+      fname = child.get('text', '')
+      selected = options[fname]
+    elif child['kind'] == 'Args':
       content = render(child)
+  if fname == 'lorem':
+    length = int(content[1:-1])
+    generator = LoremGenerator(words=length)
+    return generator.generate()
+
   return selected + content[1:-1] + selected
 
 
@@ -69,7 +74,27 @@ def render(node: JsonNode) -> str:
   if node['kind'] == 'FuncCall':
     return render_function(node)
 
+  if node['kind'] == 'Linebreak':
+    return '<br/>'
+
   if 'children' in node:
     return ''.join(render(child) for child in node['children'])
 
   return node.get('text', '')
+
+
+# --- Text Types ---
+# Highlight (done)
+# Line Break (done)
+# Lorem (done)
+# Lowercase
+# Overline
+# Raw Text / Code
+# Small Capitals
+# Smartquote
+# Strikethrough
+# Subscript
+# Superscript
+# Text (done)
+# Underline
+# Uppercase
