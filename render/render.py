@@ -56,7 +56,7 @@ def render_function(node: JsonNode) -> str:
     generator = LoremGenerator(words=length)
     return generator.generate()
   if fname == 'lower':
-    return content[1:-1].lower()
+    return content[1:-1].strip('"').lower()
 
   return selected + content[1:-1] + selected
 

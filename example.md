@@ -14,8 +14,8 @@ This is ==highlighted== text
 This has a linebreak <br/>
 This is the next line
 
-Sed ut dolor sit ut do et sit amet magna elit tempor et labore eiusmod.
+Amet dolore magna amet dolore sit sed magna adipiscing sed elit adipiscing dolore tempor consectetur.
 
-"make this lowercase"
+make this lowercase
 
 This is a sentence. This is another sentence.
