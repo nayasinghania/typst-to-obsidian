@@ -44,7 +44,8 @@ def render_function(node: JsonNode) -> str:
     'highlight': '==',
     'lorem': '',
     'lower': '',
-    'strike': '~~'
+    'strike': '~~',
+    'upper': ''
   }
   for child in node.get('children', []):
     if child['kind'] == 'Ident':
@@ -56,8 +57,12 @@ def render_function(node: JsonNode) -> str:
     length = int(content[1:-1])
     generator = LoremGenerator(words=length)
     return generator.generate()
+  if fname == 'lower':
+    content = content.lower()
+  if fname == 'upper':
+    content = content.upper()
 
-  return selected + content[1:-1].strip('"').lower() + selected
+  return selected + content[1:-1].strip('"') + selected
 
 
 def render(node: JsonNode) -> str:
@@ -99,4 +104,4 @@ def render(node: JsonNode) -> str:
 # Superscript
 # Text (done)
 # Underline
-# Uppercase
+# Uppercase (done)
