@@ -88,20 +88,3 @@ def render(node: JsonNode) -> str:
     return ''.join(render(child) for child in node['children'])
 
   return node.get('text', '')
-
-
-# --- Text Types ---
-# Highlight (done)
-# Line Break (done)
-# Lorem (done)
-# Lowercase (done)
-# Overline
-# Raw Text / Code
-# Small Capitals
-# Smartquote
-# Strikethrough (done)
-# Subscript
-# Superscript
-# Text (done)
-# Underline
-# Uppercase (done)

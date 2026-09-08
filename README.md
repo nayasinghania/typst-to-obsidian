@@ -8,7 +8,18 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 1. `pip install -r converter/requirements.txt`
 
 ## Currently Supported Conversions
-- Headings
-- Bold text
-- Italic text
-- Highlighted text
+### Text
+- [x] Highlight
+- [x] Line Break
+- [x] Lorem
+- [x] Lowercase
+- [ ] Overline
+- [ ] Raw Text / Code
+- [ ] Small Capitals
+- [ ] Smartquote
+- [x] Strikethrough
+- [] Subscript
+- [] Superscript
+- [x] Text
+- [ ] Underline
+- [x] Uppercase
