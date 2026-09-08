@@ -1,5 +1,7 @@
-from classes import JsonNode
 from lorem_gen.generator import LoremGenerator
+
+from classes import JsonNode
+
 
 def render_heading(node: JsonNode) -> str:
   marker = ''
@@ -45,7 +47,7 @@ def render_function(node: JsonNode) -> str:
     'lorem': '',
     'lower': '',
     'strike': '~~',
-    'upper': ''
+    'upper': '',
   }
   for child in node.get('children', []):
     if child['kind'] == 'Ident':
