@@ -14,10 +14,11 @@ This is ==highlighted== text
 This has a linebreak <br/>
 This is the next line
 
-Magna adipiscing ut tempor tempor aliqua sit consectetur ut lorem amet do dolore et adipiscing.
+Eiusmod do dolore dolor labore labore ipsum sed lorem eiusmod magna aliqua et et elit.
 
 make this lowercase
 ~~strike this out~~
+<u>underline this</u>
 MAKE THIS UPPERCASE
 
 This is a sentence. This is another sentence.

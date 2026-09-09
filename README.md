@@ -21,5 +21,5 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 - [] Subscript
 - [] Superscript
 - [x] Text
-- [ ] Underline
+- [x] Underline
 - [x] Uppercase

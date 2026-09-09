@@ -43,11 +43,12 @@ def render_function(node: JsonNode) -> str:
   fname = ''
   selected = ''
   options = {
-    'highlight': '==',
-    'lorem': '',
-    'lower': '',
-    'strike': '~~',
-    'upper': '',
+    'highlight': ['==', '=='],
+    'lorem': ['', ''],
+    'lower': ['', ''],
+    'strike': ['~~', '~~'],
+    'underline': ['<u>', '</u>'],
+    'upper': ['', ''],
   }
   for child in node.get('children', []):
     if child['kind'] == 'Ident':
@@ -64,7 +65,7 @@ def render_function(node: JsonNode) -> str:
   if fname == 'upper':
     content = content.upper()
 
-  return selected + content[1:-1].strip('"') + selected
+  return selected[0] + content[1:-1].strip('"') + selected[1]
 
 
 def render(node: JsonNode) -> str:
