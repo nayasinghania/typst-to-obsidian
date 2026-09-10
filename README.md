@@ -18,8 +18,8 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 - [ ] Small Capitals
 - [ ] Smartquote
 - [x] Strikethrough
-- [] Subscript
-- [] Superscript
+- [x] Subscript
+- [ ] Superscript
 - [x] Text
 - [x] Underline
 - [x] Uppercase
