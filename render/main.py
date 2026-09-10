@@ -16,5 +16,5 @@ markdown = render(parsed_data)
 
 print(json.dumps(parsed_data, indent=2))
 
-output_filename = filename.with_suffix('.md')
+output_filename = filename.with_name(f'gen-{filename.stem}.md')
 _ = output_filename.write_text(markdown, encoding='utf-8')
