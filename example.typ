@@ -18,7 +18,9 @@ This is the next line
 
 #lower("MAKE THIS LOWERCASE")
 #strike("strike this out")
+make this#sub("a subscript")
 #underline("underline this")
 #upper("make this uppercase")
+
 
 This is a sentence. This is another sentence.
