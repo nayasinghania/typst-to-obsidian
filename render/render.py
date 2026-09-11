@@ -48,6 +48,7 @@ def render_function(node: JsonNode) -> str:
     'lower': ['', ''],
     'strike': ['~~', '~~'],
     'sub': ['$_{\\text{', '}}$'],
+    'super': ['$^{\\text{', '}}$'],
     'underline': ['<u>', '</u>'],
     'upper': ['', ''],
   }

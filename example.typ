@@ -13,6 +13,7 @@ This is the next line
 #lower("MAKE THIS LOWERCASE")
 #strike("strike this out")
 make this#sub("a subscript")
+make this#super("a superscript")
 #underline("underline this")
 #upper("make this uppercase")
 

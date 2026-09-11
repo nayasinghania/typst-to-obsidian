@@ -8,11 +8,12 @@ This is ==highlighted== text
 This has a linebreak <br/>
 This is the next line
 
-Sed eiusmod adipiscing dolore consectetur sit dolor dolor magna ipsum aliqua magna eiusmod tempor magna.
+Aliqua dolore ut sit sit ipsum ut amet et aliqua tempor do lorem et amet.
 
 make this lowercase
 ~~strike this out~~
 make this$_{\text{a subscript}}$
+make this$^{\text{a superscript}}$
 <u>underline this</u>
 MAKE THIS UPPERCASE
 

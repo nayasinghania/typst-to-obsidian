@@ -19,7 +19,7 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 - [ ] Smartquote
 - [x] Strikethrough
 - [x] Subscript
-- [ ] Superscript
+- [x] Superscript
 - [x] Text
 - [x] Underline
 - [x] Uppercase
