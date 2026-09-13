@@ -13,7 +13,7 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 - [x] Line Break
 - [x] Lorem
 - [x] Lowercase
-- [ ] Overline
+- [x] Overline
 - [ ] Raw Text / Code
 - [ ] Small Capitals
 - [ ] Smartquote

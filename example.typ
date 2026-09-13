@@ -11,6 +11,7 @@ This is the next line
 #lorem(15)
 
 #lower("MAKE THIS LOWERCASE")
+#overline("overline this")
 #strike("strike this out")
 make this#sub("a subscript")
 make this#super("a superscript")

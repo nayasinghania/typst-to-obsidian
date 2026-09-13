@@ -46,6 +46,7 @@ def render_function(node: JsonNode) -> str:
     'highlight': ['==', '=='],
     'lorem': ['', ''],
     'lower': ['', ''],
+    'overline': ['$\\overline{\\text{', '}}$'],
     'strike': ['~~', '~~'],
     'sub': ['$_{\\text{', '}}$'],
     'super': ['$^{\\text{', '}}$'],
