@@ -5,7 +5,7 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 `sh convert.sh filename.typ`
 
 ## Setup
-1. `pip install -r converter/requirements.txt`
+1. `pip install -r render/requirements.txt`
 
 ## Currently Supported Conversions
 ### Text
