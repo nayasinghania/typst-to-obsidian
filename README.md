@@ -15,7 +15,7 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 - [x] Lowercase
 - [x] Overline
 - [ ] Raw Text / Code
-- [ ] Small Capitals
+- [x] Small Capitals
 - [ ] Smartquote
 - [x] Strikethrough
 - [x] Subscript

@@ -12,6 +12,7 @@ This is the next line
 
 #lower("MAKE THIS LOWERCASE")
 #overline("overline this")
+#smallcaps("make this smallcaps")
 #strike("strike this out")
 make this#sub("a subscript")
 make this#super("a superscript")

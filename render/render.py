@@ -47,6 +47,7 @@ def render_function(node: JsonNode) -> str:
     'lorem': ['', ''],
     'lower': ['', ''],
     'overline': ['$\\overline{\\text{', '}}$'],
+    'smallcaps': ['<span style="font-variant:small-caps;">', '</span>'],
     'strike': ['~~', '~~'],
     'sub': ['$_{\\text{', '}}$'],
     'super': ['$^{\\text{', '}}$'],
