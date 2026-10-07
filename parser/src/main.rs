@@ -1,21 +1,37 @@
+mod lorem;
+
+#[cfg(test)]
+mod tests;
+
 use serde::Serialize;
-use std::{env, fs};
+use std::{borrow::Cow, env, fs};
 use typst_syntax::{SyntaxNode, parse};
+
+use lorem::{extract_lorem_count, lorem_impl};
 
 #[derive(Serialize)]
 struct JsonNode<'a> {
     kind: String,
     #[serde(skip_serializing_if = "str::is_empty")]
-    text: &'a str,
+    text: Cow<'a, str>,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     children: Vec<JsonNode<'a>>,
 }
 
 impl<'a> From<&'a SyntaxNode> for JsonNode<'a> {
     fn from(node: &'a SyntaxNode) -> Self {
+        if let Some(count) = extract_lorem_count(node) {
+            let generated = lorem_impl(count);
+            return Self {
+                kind: format!("{:?}", node.kind()),
+                text: Cow::Owned(generated),
+                children: node.children().map(JsonNode::from).collect(),
+            };
+        }
+
         Self {
             kind: format!("{:?}", node.kind()),
-            text: node.leaf_text().as_str(),
+            text: Cow::Borrowed(node.leaf_text().as_str()),
             children: node.children().map(JsonNode::from).collect(),
         }
     }
