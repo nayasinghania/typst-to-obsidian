@@ -9,7 +9,7 @@ This is a command-line Typst to Obsididan converter with Typst's native Rust par
 
 ## Testing
 
-Run the Rust parser tests:
+You can test the Rust parser with the following commands:
 
 ```sh
 cd parser
