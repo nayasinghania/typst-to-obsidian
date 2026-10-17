@@ -22,6 +22,6 @@ make this#super("a superscript")
 
 This is a sentence. This is another sentence.
 
-$AA Alpha$
+$AA Alpha BB Beta CC Chi DD Delta$
 
 $grave(a)$
