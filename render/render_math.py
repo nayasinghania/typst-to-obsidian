@@ -47,6 +47,7 @@ def render_math_ident(node: JsonNode) -> str:
     'Chi': '\\mathrm{X}',
     'DD': '\\mathbb{D}',
     'Delta': '\\Delta',
+    'Digamma': '\\mathrm{F}',
   }
 
   if name in options:
