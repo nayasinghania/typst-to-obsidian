@@ -22,6 +22,6 @@ MAKE THIS UPPERCASE
 
 This is a sentence. This is another sentence.
 
-$\mathbb{A} \mathrm{A} \mathbb{B} \mathrm{B} \mathbb{C} \mathrm{X} \mathbb{D} \Delta$
+$\mathbb{A} \mathrm{A} \mathbb{B} \mathrm{B} \mathbb{C} \mathrm{X} \mathbb{D} \Delta \mathrm{F} \mathbb{E}$
 
 $\grave{a}$
